@@ -1,5 +1,5 @@
 FROM debian:latest
-ARG version
+ARG version=1.14.9
 RUN apt update && apt upgrade -y && apt install -y curl gpg ca-certificates tar dirmngr
 RUN curl -o dogecoin.tar.gz -Lk https://github.com/dogecoin/dogecoin/releases/download/v${version}/dogecoin-${version}-x86_64-linux-gnu.tar.gz
 RUN tar -xvf dogecoin.tar.gz
